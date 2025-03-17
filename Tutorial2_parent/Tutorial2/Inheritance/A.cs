@@ -9,7 +9,7 @@ public class A : IMyInterface
         Name = name;
     }
 
-    public int NewMethod()
+    public virtual int NewMethod()
     {
         return 1;
     }
