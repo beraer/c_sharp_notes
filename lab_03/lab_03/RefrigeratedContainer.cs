@@ -27,11 +27,11 @@ public class RefrigeratedContainer : Container, IContainerInterface
         CurrentProduct = productType;
     }
 
-    public void loadCargo(string productName)
+    public void LoadCargo(string productName)
     {
         if (!_productsAndTemperatures.ContainsKey(productName))
         {
-            Console.WriteLine("there is no product with name " + productName);
+            Console.WriteLine($"unknown product: {productName}");
         }
         
         if (productName != ProductType)
