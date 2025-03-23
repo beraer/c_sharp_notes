@@ -5,11 +5,9 @@ namespace lab_03;
 public class GasContainer : Container, IHazardNotifier, IContainerInterface
 {
     public bool IsHazard;
-    public double Pressure;
     public GasContainer(double massOfCargo, double height, double tareWeight, double depth, int maxPayload, bool isHazard) : base(massOfCargo, height, tareWeight, depth, maxPayload)
     {
         IsHazard = isHazard;
-        Pressure = massOfCargo;
     }
 
     public override void EmptyCargo()
@@ -28,6 +26,6 @@ public class GasContainer : Container, IHazardNotifier, IContainerInterface
         if (IsHazard == true)
         {
             Console.WriteLine("This cargo '" + SerialNumber + "' is hazardous");
-        }
+        }   
     }
 }

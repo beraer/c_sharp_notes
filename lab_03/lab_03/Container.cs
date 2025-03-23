@@ -7,7 +7,7 @@ public class Container : IContainerInterface
     public double TareWeight { get; set; }
     public double Depth { get; set; }
     private static int _IdCounter = 0;
-    public static int Id { get; set; }
+    public int Id { get; set; }
     public static string Type {get;set;}
     public string SerialNumber { get; set; }
     public int MaxPayload {get;set;}
