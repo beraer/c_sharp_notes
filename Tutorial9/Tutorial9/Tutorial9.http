@@ -1,0 +1,16 @@
+@Tutorial9_HostAddress = http://localhost:5000
+
+
+POST http://localhost:5000/api/warehouse/warehouse
+Content-Type: application/json
+
+{
+  "idProduct": 1,
+  "idWarehouse": 1,
+  "amount": 125,
+  "createdAt": "2025-05-11T10:30:00"
+}
+
+
+
+###
