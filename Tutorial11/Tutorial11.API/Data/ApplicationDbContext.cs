@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Tutorial11.API.Models;
 
 namespace Tutorial11.API.Data;
-
+    
 public class ApplicationDbContext : DbContext
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) {}
