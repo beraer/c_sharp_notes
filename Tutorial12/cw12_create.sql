@@ -70,3 +70,25 @@ ALTER TABLE Client_Trip ADD CONSTRAINT Table_5_Trip
 
 -- End of file.
 
+
+
+-- Insert Countries
+INSERT INTO Country (Name) VALUES ('Poland'), ('Germany'), ('Italy');
+
+-- Insert Trips
+INSERT INTO Trip (Name, Description, DateFrom, DateTo, MaxPeople)
+VALUES 
+('Rome Adventure', 'Trip to Rome', '2025-05-01', '2025-05-10', 20),
+('Berlin Tour', 'Trip to Berlin', '2025-06-01', '2025-06-07', 15);
+
+-- Link Countries to Trips
+INSERT INTO Country_Trip (IdCountry, IdTrip)
+SELECT c.IdCountry, t.IdTrip
+FROM Country c, Trip t
+WHERE (c.Name = 'Italy' AND t.Name = 'Rome Adventure')
+   OR (c.Name = 'Germany' AND t.Name = 'Berlin Tour')
+   OR (c.Name = 'Poland' AND t.Name = 'Rome Adventure');
+
+-- Insert a Client (for delete test)
+INSERT INTO Client (FirstName, LastName, Email, Telephone, Pesel)
+VALUES ('Test', 'User', 'test@example.com', '123-456-789', '90010112345');
